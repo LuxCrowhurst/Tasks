@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Quest</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { margin: 0; padding: 0; }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .7; } }
+  </style>
+</head>
+<body>
+  <div id="app" class="flex flex-col h-screen bg-gradient-to-b from-purple-50 to-blue-50">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-purple-600 to-blue-500 p-5 text-white shadow-lg">
+      <h1 class="text-2xl font-bold text-center">Reward</h1>
+      <p class="text-sm text-center opacity-90">Path to reward</p>
+    </div>
+    
+    <!-- Navigation Tabs -->
+    <div class="flex border-b bg-white shadow-sm">
+      <button id="tab-dashboard" class="flex-1 py-3 font-medium text-sm text-blue-600 border-b-2 border-blue-600">
+        Dashboard
+      </button>
+      <button id="tab-tasks" class="flex-1 py-3 font-medium text-sm text-gray-500">
+        Tasks
+      </button>
+      <button id="tab-history" class="flex-1 py-3 font-medium text-sm text-gray-500">
+        History
+      </button>
+    </div>
+    
+    <!-- Main Content Area -->
+    <div id="content-area" class="flex-1 overflow-y-auto p-4">
+      <!-- Content will be inserted here by JavaScript -->
+    </div>
+    
+    <!-- Modal Container -->
+    <div id="modal-container" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <!-- Modal content will be inserted here by JavaScript -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
